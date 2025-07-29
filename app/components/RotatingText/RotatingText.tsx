@@ -12,11 +12,14 @@ import {
   motion,
   AnimatePresence,
   Transition,
+  useAnimationControls,
   type VariantLabels,
   type Target,
-  type AnimationControls,
   type TargetAndTransition,
 } from "framer-motion";
+
+type AnimationControls = ReturnType<typeof useAnimationControls>;
+
 
 function cn(...classes: (string | undefined | null | boolean)[]): string {
   return classes.filter(Boolean).join(" ");
